@@ -40,8 +40,7 @@ jobs:
       - name: Build APK
         run: |
           cd android
-          chmod +x gradlew
-          ./gradlew assembleDebug
+          gradle assembleDebug
           mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/StudyTube.apk
 
       - name: Upload APK
